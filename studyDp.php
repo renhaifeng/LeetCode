@@ -8,11 +8,12 @@ function studyDp($arr)
 {
     $count = count($arr);
 
-    $currentNum = $bestNum = 0;
+    $currentSum = $bestSum = 0;
     for ($i = 0; $i < $count; $i++) {
-        $currentNum = max($arr[$i], $currentNum + $arr[$i]);
-        $bestNum    = max($currentNum, $bestNum);
+        $currentSum = max($arr[$i], $currentSum + $arr[$i]);
+        $bestSum    = max($currentSum, $bestSum);
     }
+    return $bestSum;
 }
 
 echo studyDp([-2, 1, -3, 4, -1, 2, 1, -5, 4]) . PHP_EOL;
