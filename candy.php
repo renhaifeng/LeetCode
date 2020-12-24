@@ -20,7 +20,7 @@ function candy($ratings) {
     // 计算右规则
     for($i = $count - 1; $i >= 0; $i--) {
         if ($ratings[$i] > $ratings[$i + 1]) {
-            $right[$i] = max($right[$i], $right[$i + 1] + 1);
+            $right[$i] = $right[$i + 1] + 1;
         }
     }
 
